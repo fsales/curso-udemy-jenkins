@@ -1,0 +1,41 @@
+plugins {
+    id 'groovy'
+    id 'java'
+    id 'idea'
+}
+
+group 'br.com.missaodevops'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+repositories {
+
+    maven { url 'https://repo.jenkins-ci.org/releases/'}
+    maven { url 'https://updates.jenkins-ci.org/download/plugins/'}
+    maven { url 'https://jenkins-updates.cloudbees.com/download/plugins/'}
+
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.groovy:groovy:4.0.1'
+
+    implementation 'org.jenkins-ci.main:jenkins-core:2.342'
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}

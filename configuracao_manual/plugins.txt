@@ -127,3 +127,5 @@ jaxb:2.3.0.1
 jdk-tool:1.5
 windows-slaves:1.8
 thinBackup:1.10
+kubernetes:3580.v78271e5631dc
+cloudbees-bitbucket-branch-source:765.v5a_2d6a_23c01d

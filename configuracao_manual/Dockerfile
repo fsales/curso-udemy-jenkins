@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.343
+FROM jenkins/jenkins:2.344
 USER root
 
 RUN apt-get update && apt-get install -qq -f -y make git openjdk-17-jdk
